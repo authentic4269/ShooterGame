@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shooterphone"
+    package="com.shooterphone"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="shooterphone.SettingsActivity"
+            android:name="com.shooterphone.SettingsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.SETTINGS" />
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="shooterphone.MainActivity"
+            android:name="com.shooterphone.ServerSelectionActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,14 +35,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name="com.androidcontroller.BluetoothService"
+            android:label="BluetoothService" >
+        </service>
+        <service
+            android:name="com.androidcontroller.AccelerometerService"
+            android:label="Accelerometer Service" >
+        </service>
         <activity
-            android:name="shooterphone.BluetoothService"
-            android:label="@string/title_activity_bluetooth_test" >
-        </activity>
-        <activity
-            android:name="shooterphone.ShooterActivity"
+            android:name="com.shooterphone.ShootingActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_hunting_screen"
+            android:label="Hunting Screen"
             android:theme="@style/FullscreenTheme" >
         </activity>
     </application>

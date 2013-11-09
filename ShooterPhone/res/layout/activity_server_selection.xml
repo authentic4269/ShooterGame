@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -14,7 +13,7 @@
         android:layout_gravity="center" />
 
     <ListView
-        android:id="@+id/server_list"
+        android:id="@id/android:list"
         android:layout_width="match_parent"
         android:layout_height="270dp"
         android:choiceMode="singleChoice" >
