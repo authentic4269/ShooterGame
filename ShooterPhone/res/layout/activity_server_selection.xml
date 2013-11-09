@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DUCK HUNT"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp"
+        android:layout_gravity="center" />
+
+    <ListView
+        android:id="@+id/server_list"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:choiceMode="singleChoice" >
+    </ListView>
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Networks"
+        android:onClick="scanNetworks"
+        android:layout_gravity="center" />
+    
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:onClick="connectToComputer"
+        android:layout_gravity="center" />
+    
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:onClick="startGame"
+        android:layout_gravity="center" />
+
+</LinearLayout>

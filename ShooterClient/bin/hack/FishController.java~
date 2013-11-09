@@ -1,0 +1,39 @@
+package hack;
+
+//import bluetooth.*;
+import javax.bluetooth.*;
+import java.io.DataInputStream;
+import java.io.IOException;
+ 
+import javax.microedition.io.Connector;
+import javax.microedition.io.StreamConnection;
+import javax.microedition.io.StreamConnectionNotifier;
+
+public class FishController implements Runnable{
+	private Thread viewthread;
+	private static FishView view;
+	private static FishModel model;
+	//private SocketServer droid;
+	
+	public static void main(String args[]){
+		new FishController();
+	}
+	
+	public void run(){
+		view = new FishView();
+<<<<<<< HEAD
+		model = new FishModel();
+		controller = new FishController();
+=======
+>>>>>>> 3ec8f312bf8bc2aa18e9719463b58615493f6112
+	}
+	
+	public FishController()
+	{
+		model = new FishModel();
+		viewthread = new Thread(this, "View Thread");
+		viewthread.start();
+		//droid = new SocketServer(this);
+	}
+}
+
